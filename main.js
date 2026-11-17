@@ -8,7 +8,7 @@ document.querySelectorAll(".p").forEach(el=>el.addEventListener("click",()=>{
 (function(){
   const box=document.getElementById("desfile");if(!box)return;
   const quiet=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const data=[{e:"🦸",img:"img/luchador.png",h:84,s:"¡Órale, vamos!",v:70},{e:"👧🏽",img:"img/nina.png",h:108,s:"¡Corazón de melón!",v:55},{e:"🐕",img:"img/perro.png",h:108,s:"¡Guau, ándale!",v:85}];
+  const data=[{e:"🦸",img:"img/luchador.png",h:84,s:"¡Órale, vamos!",v:60},{e:"👧🏽",img:"img/nina.png",h:108,s:"¡Corazón de melón!",v:60},{e:"🐕",img:"img/perro.png",h:108,s:"¡Guau, ándale!",v:60}];
   const items=data.map((d,i)=>{
     const el=document.createElement("div");el.className="ch"+(d.f?" flip":"");
     el.innerHTML='<span class="b"><img alt="" style="height:'+d.h+'px" src="'+d.img+'"></span><span class="say">'+d.s+'</span>';
