@@ -1,7 +1,6 @@
 /* ===== fuentes de marca (archivos en /fonts) ===== */
 @font-face{font-family:"Reactive Anchor";src:url(fonts/ReactiveAnchor.otf) format("opentype");font-display:swap}
 @font-face{font-family:"Europa Grotesk";src:url(fonts/EuropaGrotesk.otf) format("opentype");font-display:swap}
-
 /* ===== paleta del branding ===== */
 :root{--y:#F3DD4C;--r:#FC2A8D;--b:#01AADE;--o:#EC4804;--c:#F3ECDC;--g:#5F5555;--k:#000;
 --disp:"Reactive Anchor","Bowlby One","Arial Black",sans-serif;
@@ -17,7 +16,7 @@ img{max-width:100%;height:auto}
 /* ===== nav ===== */
 nav{position:sticky;top:0;z-index:20;background:var(--k);color:var(--c);border-bottom:4px solid var(--y)}
 nav .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-nav b{font-family:var(--body);font-weight:700;font-size:22px;letter-spacing:.02em;color:var(--y)}
+nav b{font-family:"Europa Grotesk","Archivo",sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;color:var(--y)}
 nav ul{display:flex;gap:22px;margin:0;padding:0;list-style:none;font-weight:600;font-size:15px}
 nav a{text-decoration:none}nav a:hover{color:var(--y)}
 @media(max-width:700px){nav ul{display:none}}
@@ -49,7 +48,7 @@ h2{font-size:clamp(34px,6vw,60px);margin-bottom:18px}
 .cor .w{display:grid;gap:40px;grid-template-columns:1.2fr .8fr;align-items:center}
 .cor .w>*{min-width:0}
 .cor blockquote{margin:0;font:400 clamp(26px,4vw,42px)/1.15 var(--disp);color:var(--y)}
-.melon{aspect-ratio:1;width:100%;max-width:260px;margin:auto;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 30%,#fff3 0 12%,transparent 13%),conic-gradient(var(--o),var(--y),var(--o));border:6px solid #000;box-shadow:12px 12px 0 #000;display:grid;place-items:center;font-size:100px;animation:bob 4s ease-in-out infinite}
+.melon{aspect-ratio:1;width:100%;max-width:360px;margin:auto;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 30%,#fff3 0 12%,transparent 13%),conic-gradient(var(--o),var(--y),var(--o));border:6px solid #000;box-shadow:12px 12px 0 #000;display:grid;place-items:center;font-size:100px;animation:bob 4s ease-in-out infinite}
 .melon img{width:65%;height:auto;display:block}
 @keyframes bob{50%{transform:translateY(-12px) rotate(4deg)}}
 @media(max-width:800px){.cor .w{grid-template-columns:1fr}}
@@ -58,14 +57,18 @@ h2{font-size:clamp(34px,6vw,60px);margin-bottom:18px}
 .grid{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:36px}
 .card{background:#fff;border:3px solid #000;border-radius:26px;padding:26px;box-shadow:8px 8px 0 #000;transition:transform .2s}
 .card:hover{transform:translateY(-6px) rotate(-.8deg)}
-.card h3{font-size:22px;margin:10px 0;overflow-wrap:anywhere}
+.card h3{font-family:var(--body);font-weight:700;font-size:23px;letter-spacing:.04em;margin:10px 0;overflow-wrap:anywhere}
 
 /* personajes */
 .chars{background:#fff}
 .chars .card{text-align:center;padding-top:0;overflow:hidden}
 .pic{margin:0 -26px 14px;height:210px;display:grid;place-items:center;border-bottom:3px solid #000;overflow:hidden}
 .pic.a{background:var(--r)}.pic.b{background:var(--y)}.pic.c{background:var(--b)}
-.pic img{height:200px;width:auto;max-width:100%;object-fit:contain;display:block}
+.pic img{height:200px;width:auto;max-width:none;object-fit:contain;display:block}
+/* zoom a cada gif (sus lienzos traen mucho espacio vacío); sube o baja el número */
+.pic.a img{transform:scale(2.4)}
+.pic.b img{transform:scale(1.7)}
+.pic.c img{transform:scale(1.15)}
 
 /* productos */
 .prod{background:var(--o)}
