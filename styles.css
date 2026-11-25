@@ -95,4 +95,5 @@ footer b{display:block;font:400 34px var(--disp);color:var(--y);margin-bottom:6p
 .pic.a{background:var(--r)}
 .pic.b{background:var(--y)}
 .pic.c{background:var(--b)}
+
 .pic img{height:180px;width:auto;max-width:100%;object-fit:contain;display:block}
