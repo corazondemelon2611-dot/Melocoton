@@ -88,3 +88,11 @@ footer b{display:block;font:400 34px var(--disp);color:var(--y);margin-bottom:6p
 .ch.flip .b{animation-name:paso}
 @media(prefers-reduced-motion:reduce){.ch .b{animation:none!important}}
 .ch img{display:block;height:96px;width:auto;max-width:none;pointer-events:none}.ch .em{font-size:76px;line-height:1}
+/* personajes */
+.chars{background:#fff}
+.chars .card{text-align:center;padding-top:0;overflow:hidden}
+.pic{margin:0 -26px 14px;height:210px;display:grid;place-items:center;border-bottom:3px solid #000;overflow:hidden}
+.pic.a{background:var(--r)}
+.pic.b{background:var(--y)}
+.pic.c{background:var(--b)}
+.pic img{height:180px;width:auto;max-width:100%;object-fit:contain;display:block}
