@@ -1,60 +1,79 @@
-@font-face{font-family:"Reactive Anchor";src:url(fonts/ReactiveAnchor.otf) format("opentype")}
+/* ===== fuentes de marca (archivos en /fonts) ===== */
+@font-face{font-family:"Reactive Anchor";src:url(fonts/ReactiveAnchor.otf) format("opentype");font-display:swap}
+@font-face{font-family:"Europa Grotesk";src:url(fonts/EuropaGrotesk.otf) format("opentype");font-display:swap}
+
+/* ===== paleta del branding ===== */
 :root{--y:#F3DD4C;--r:#FC2A8D;--b:#01AADE;--o:#EC4804;--c:#F3ECDC;--g:#5F5555;--k:#000;
---disp:"Bowlby One","Impact","Arial Black",sans-serif;--body:"Archivo",system-ui,sans-serif}
+--disp:"Reactive Anchor","Bowlby One","Arial Black",sans-serif;
+--body:"Europa Grotesk","Archivo",system-ui,sans-serif}
+
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
-body{margin:0;background:var(--c);color:#1d1818;font:400 17px/1.65 var(--body)}
+body{margin:0;background:var(--c);color:#1d1818;font:400 17px/1.65 var(--body);overflow-x:hidden}
 h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.02;margin:0}
 a{color:inherit}.w{max-width:1100px;margin:0 auto;padding:0 22px}
+img{max-width:100%;height:auto}
 :focus-visible{outline:3px solid var(--b);outline-offset:3px}
-/* nav */
+
+/* ===== nav ===== */
 nav{position:sticky;top:0;z-index:20;background:var(--k);color:var(--c);border-bottom:4px solid var(--y)}
 nav .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-nav b{font-family:var(--disp);font-weight:400;font-size:22px;color:var(--y)}
+nav b{font-family:var(--body);font-weight:700;font-size:22px;letter-spacing:.02em;color:var(--y)}
 nav ul{display:flex;gap:22px;margin:0;padding:0;list-style:none;font-weight:600;font-size:15px}
 nav a{text-decoration:none}nav a:hover{color:var(--y)}
 @media(max-width:700px){nav ul{display:none}}
-/* hero */
-.hero{background:var(--g);color:var(--c);text-align:center;padding:72px 0 0;position:relative;overflow:hidden}
+
+/* ===== hero ===== */
+.hero{background:var(--g);color:var(--c);text-align:center;padding:36px 0 0;position:relative;overflow:hidden}
 .hero::before{content:"M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M";
-position:absolute;left:0;right:0;top:-90px;bottom:0;font:400 54px/90px "Reactive Anchor",var(--disp);letter-spacing:34px;text-align:center;color:#ffffff10;overflow:hidden;pointer-events:none;animation:lluvia 6s linear infinite}
+position:absolute;left:0;right:0;top:-90px;bottom:0;font:400 54px/90px var(--disp);letter-spacing:34px;text-align:center;color:#ffffff10;overflow:hidden;pointer-events:none;animation:lluvia 6s linear infinite}
 @keyframes lluvia{to{transform:translateY(90px)}}
-.logo{position:relative;display:inline-block;font-size:clamp(52px,12.5vw,150px);padding:0 .08em;color:var(--r);-webkit-text-fill-color:var(--r);-webkit-text-stroke:.03em #000;paint-order:stroke fill;transform:rotate(-3deg);animation:pop .9s cubic-bezier(.2,1.6,.4,1) both;
-text-shadow:.02em .02em 0 var(--r),.04em .04em 0 var(--r),.06em .06em 0 var(--r),.08em .08em 0 var(--r),.1em .1em 0 var(--r),.12em .12em 0 #000}
-.logo::after{content:attr(data-t);position:absolute;left:0;top:0;padding:0 .08em;background:linear-gradient(#fff 0 38%,var(--y) 52% 68%,var(--b) 72%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:.03em #000;text-shadow:none}
+.logo-img{position:relative;margin:0 auto;max-width:340px;animation:pop .9s cubic-bezier(.2,1.6,.4,1) both}
+.logo-img img{display:block;width:100%;height:auto}
 @keyframes pop{from{transform:scale(.5) rotate(6deg);opacity:0}}
-.hero p{position:relative;max-width:34em;margin:30px auto 0;font-size:21px}
-.btn{display:inline-block;margin-top:26px;background:var(--o);color:#000;font-weight:800;padding:14px 30px;border-radius:999px;text-decoration:none;border:3px solid #000;box-shadow:5px 5px 0 #000;transition:transform .15s,box-shadow .15s}
+.hero p{position:relative;max-width:34em;margin:14px auto 0;font-size:18px}
+.btn{position:relative;display:inline-block;margin-top:18px;background:var(--o);color:#000;font-weight:800;padding:14px 30px;border-radius:999px;text-decoration:none;border:3px solid #000;box-shadow:5px 5px 0 #000;transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 #000;background:var(--y)}
-.hero .row{position:relative;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:12px}
-.hero .star{position:absolute;color:var(--b);font-size:44px}
-.cut{height:56px;background:var(--c);margin-top:56px;clip-path:polygon(0 100%,0 40%,10% 70%,20% 30%,30% 70%,40% 30%,50% 70%,60% 30%,70% 70%,80% 30%,90% 70%,100% 40%,100% 100%)}
-/* barra del desfile */
+.cut{position:relative;height:56px;background:var(--c);margin-top:32px;clip-path:polygon(0 100%,0 40%,10% 70%,20% 30%,30% 70%,40% 30%,50% 70%,60% 30%,70% 70%,80% 30%,90% 70%,100% 40%,100% 100%)}
+
+/* ===== barra del desfile ===== */
 .mq{position:relative;z-index:2;height:124px;margin-top:-6px;background:var(--y);border-block:5px solid #000}
 .mq::after{content:"";position:absolute;left:0;right:0;bottom:8px;border-bottom:5px dashed var(--r)}
-/* sections */
+
+/* ===== secciones ===== */
 section{padding:96px 0}
 h2{font-size:clamp(34px,6vw,60px);margin-bottom:18px}
 .lead{max-width:38em;font-size:19px}
-.cor{background:var(--r);color:var(--c);position:relative}
-.cor .w{display:grid;gap:40px;grid-template-columns:1.1fr .9fr;align-items:center}
+
+/* corazón de melón */
+.cor{background:var(--r);color:var(--c);position:relative;padding:64px 0}
+.cor .w{display:grid;gap:40px;grid-template-columns:1.2fr .8fr;align-items:center}
+.cor .w>*{min-width:0}
 .cor blockquote{margin:0;font:400 clamp(26px,4vw,42px)/1.15 var(--disp);color:var(--y)}
-.melon{aspect-ratio:1;width:100%;max-width:340px;margin:auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3 0 12%,transparent 13%),conic-gradient(var(--o),var(--y),var(--o));border:6px solid #000;box-shadow:12px 12px 0 #000;display:grid;place-items:center;font-size:120px;animation:bob 4s ease-in-out infinite}
+.melon{aspect-ratio:1;width:100%;max-width:260px;margin:auto;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 30%,#fff3 0 12%,transparent 13%),conic-gradient(var(--o),var(--y),var(--o));border:6px solid #000;box-shadow:12px 12px 0 #000;display:grid;place-items:center;font-size:100px;animation:bob 4s ease-in-out infinite}
+.melon img{width:65%;height:auto;display:block}
 @keyframes bob{50%{transform:translateY(-12px) rotate(4deg)}}
 @media(max-width:800px){.cor .w{grid-template-columns:1fr}}
+
+/* tarjetas */
 .grid{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:36px}
 .card{background:#fff;border:3px solid #000;border-radius:26px;padding:26px;box-shadow:8px 8px 0 #000;transition:transform .2s}
 .card:hover{transform:translateY(-6px) rotate(-.8deg)}
 .card h3{font-size:22px;margin:10px 0;overflow-wrap:anywhere}
+
 /* personajes */
 .chars{background:#fff}
 .chars .card{text-align:center;padding-top:0;overflow:hidden}
-.pic{margin:0 -26px 14px;height:210px;display:grid;place-items:center;font-size:104px;border-bottom:3px solid #000}
+.pic{margin:0 -26px 14px;height:210px;display:grid;place-items:center;border-bottom:3px solid #000;overflow:hidden}
 .pic.a{background:var(--r)}.pic.b{background:var(--y)}.pic.c{background:var(--b)}
+.pic img{height:180px;width:auto;max-width:100%;object-fit:contain;display:block}
+
 /* productos */
 .prod{background:var(--o)}
 .tag{display:inline-block;background:var(--y);border:2px solid #000;border-radius:999px;padding:2px 14px;font-size:14px;font-weight:800}
 .ico{font-size:52px;line-height:1}
-/* intervenible */
+.ico img{height:56px;width:auto;display:block}
+
+/* peluche intervenible */
 .int{background:var(--b);color:#fff}
 .int .w{display:grid;gap:50px;grid-template-columns:1fr 1fr;align-items:center}
 .int svg{width:100%;max-width:380px;margin:auto;display:block;filter:drop-shadow(8px 8px 0 #000)}
@@ -62,40 +81,34 @@ h2{font-size:clamp(34px,6vw,60px);margin-bottom:18px}
 .int svg path:hover,.int svg circle:hover,.int svg rect:hover{opacity:.9}
 .sw{display:flex;gap:10px;margin-top:18px}.sw i{width:34px;height:34px;border-radius:50%;border:3px solid #000}
 @media(max-width:800px){.int .w{grid-template-columns:1fr}}
+
 /* kits */
 .kit{background:var(--c)}
 .kit .card ul{padding-left:20px;margin:8px 0}
 .kit .big{background:var(--y)}
+
 /* objetivos */
 .obj{background:#000;color:var(--c)}
 .obj ol{list-style:none;counter-reset:n;padding:0;display:grid;gap:22px;margin-top:34px}
 .obj li{counter-increment:n;display:grid;grid-template-columns:70px 1fr;gap:20px;align-items:start;max-width:52em}
 .obj li::before{content:counter(n);font:400 30px var(--disp);display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--y);color:#000;border:3px solid var(--c)}
+
+/* distribución y footer */
 .dist{background:var(--y)}.dist .btn{background:var(--r);color:var(--c)}.dist .btn:hover{background:#fff;color:#000}
 footer{background:#000;color:var(--c);text-align:center;padding:46px 20px;font-size:15px}
 footer b{display:block;font:400 34px var(--disp);color:var(--y);margin-bottom:6px}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
-/* desfile de personajes */
+/* ===== desfile de personajes ===== */
 #desfile{position:absolute;left:0;right:0;bottom:14px;height:100px;z-index:3;pointer-events:none}
 .ch{position:absolute;left:0;bottom:0;pointer-events:auto;cursor:pointer;will-change:transform;user-select:none;-webkit-tap-highlight-color:transparent}
 .ch .b{display:block;font-size:76px;line-height:1;filter:drop-shadow(4px 4px 0 #000);animation:paso .45s ease-in-out infinite alternate}
-.ch.flip .b{transform:scaleX(-1)}
+.ch.flip img,.ch.flip .em{transform:scaleX(-1)}
 .ch.jump .b{animation:salto .6s ease-out}
 .ch .say{position:absolute;left:50%;bottom:92px;transform:translateX(-50%) scale(0);transform-origin:bottom;white-space:nowrap;background:#fff;color:#000;border:3px solid #000;border-radius:16px;padding:4px 12px;font:400 16px var(--disp);transition:transform .2s}
 .ch.talk .say{transform:translateX(-50%) scale(1)}
+.ch img{display:block;height:96px;width:auto;max-width:none;pointer-events:none}
+.ch .em{display:block;font-size:76px;line-height:1}
 @keyframes paso{from{transform:translateY(0) rotate(-5deg)}to{transform:translateY(-10px) rotate(5deg)}}
 @keyframes salto{40%{transform:translateY(-60px) rotate(-12deg) scale(1.15)}}
-.ch.flip .b{animation-name:paso}
-@media(prefers-reduced-motion:reduce){.ch .b{animation:none!important}}
-.ch img{display:block;height:96px;width:auto;max-width:none;pointer-events:none}.ch .em{font-size:76px;line-height:1}
-/* personajes */
-.chars{background:#fff}
-.chars .card{text-align:center;padding-top:0;overflow:hidden}
-.pic{margin:0 -26px 14px;height:210px;display:grid;place-items:center;border-bottom:3px solid #000;overflow:hidden}
-.pic.a{background:var(--r)}
-.pic.b{background:var(--y)}
-.pic.c{background:var(--b)}
-.pic img{height:180px;width:auto;max-width:100%;object-fit:contain;display:block}
-.hero h1.logo-img{position:relative;margin:0 auto;max-width:420px;animation:pop .9s cubic-bezier(.2,1.6,.4,1) both}
-.hero h1.logo-img img{display:block;width:100% !important;height:auto !important;max-width:420px !important}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
