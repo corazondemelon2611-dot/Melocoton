@@ -1,5 +1,5 @@
 @font-face{font-family:"Reactive Anchor";src:url(fonts/ReactiveAnchor.otf) format("opentype")}
-:root{--y:#EBD842;--r:#A8261E;--b:#2E58B0;--o:#FF9100;--c:#F3ECDC;--g:#5F5555;--k:#000;
+:root{--y:#F3DD4C;--r:#FC2A8D;--b:#01AADE;--o:#EC4804;--c:#F3ECDC;--g:#5F5555;--k:#000;
 --disp:"Bowlby One","Impact","Arial Black",sans-serif;--body:"Archivo",system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
 body{margin:0;background:var(--c);color:#1d1818;font:400 17px/1.65 var(--body)}
@@ -15,7 +15,7 @@ nav a{text-decoration:none}nav a:hover{color:var(--y)}
 @media(max-width:700px){nav ul{display:none}}
 /* hero */
 .hero{background:var(--g);color:var(--c);text-align:center;padding:72px 0 0;position:relative;overflow:hidden}
-.hero::before{content:"M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M";
+.hero::before{content:"M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M";
 position:absolute;left:0;right:0;top:-90px;bottom:0;font:400 54px/90px "Reactive Anchor",var(--disp);letter-spacing:34px;text-align:center;color:#ffffff10;overflow:hidden;pointer-events:none;animation:lluvia 6s linear infinite}
 @keyframes lluvia{to{transform:translateY(90px)}}
 .logo{position:relative;display:inline-block;font-size:clamp(52px,12.5vw,150px);padding:0 .08em;color:var(--r);-webkit-text-fill-color:var(--r);-webkit-text-stroke:.03em #000;paint-order:stroke fill;transform:rotate(-3deg);animation:pop .9s cubic-bezier(.2,1.6,.4,1) both;
