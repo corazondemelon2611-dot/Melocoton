@@ -3,7 +3,7 @@
 @font-face{font-family:"Europa Grotesk";src:url(fonts/EuropaGrotesk.otf) format("opentype");font-display:swap}
 /* ===== paleta del branding ===== */
 :root{--y:#F3DD4C;--r:#FC2A8D;--b:#01AADE;--o:#EC4804;--c:#F3ECDC;--g:#5F5555;--k:#000;
---disp:"Reactive Anchor","Bowlby One","Arial Black",sans-serif;
+--disp:"Europa Grotesk","Archivo","Arial Black",sans-serif;
 --body:"Europa Grotesk","Archivo",system-ui,sans-serif}
 
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
@@ -24,7 +24,7 @@ nav a{text-decoration:none}nav a:hover{color:var(--y)}
 /* ===== hero ===== */
 .hero{background:var(--g);color:var(--c);text-align:center;padding:36px 0 0;position:relative;overflow:hidden}
 .hero::before{content:"M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M";
-position:absolute;left:0;right:0;top:-90px;bottom:0;font:400 54px/90px var(--disp);letter-spacing:34px;text-align:center;color:#ffffff10;overflow:hidden;pointer-events:none;animation:lluvia 6s linear infinite}
+position:absolute;left:0;right:0;top:-90px;bottom:0;font:400 54px/90px "Reactive Anchor","Bowlby One",sans-serif;letter-spacing:34px;text-align:center;color:#ffffff10;overflow:hidden;pointer-events:none;animation:lluvia 6s linear infinite}
 @keyframes lluvia{to{transform:translateY(90px)}}
 .logo-img{position:relative;margin:0 auto;max-width:340px;animation:pop .9s cubic-bezier(.2,1.6,.4,1) both}
 .logo-img img{display:block;width:100%;height:auto}
@@ -66,8 +66,8 @@ h2{font-size:clamp(34px,6vw,60px);margin-bottom:18px}
 .pic.a{background:var(--r)}.pic.b{background:var(--y)}.pic.c{background:var(--b)}
 .pic img{height:200px;width:auto;max-width:none;object-fit:contain;display:block}
 /* zoom a cada gif (sus lienzos traen mucho espacio vacío); sube o baja el número */
-.pic.a img{transform:translate(-70px,-90px) scale(2.4)}
-.pic.b img{transform:translate(60px,10px) scale(1.7)}
+.pic.a img{transform:scale(2.4)}
+.pic.b img{transform:scale(1.7)}
 .pic.c img{transform:scale(1.15)}
 
 /* productos */
