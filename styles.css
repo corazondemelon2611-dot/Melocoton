@@ -1,14 +1,16 @@
-/* ===== fuentes de marca (archivos en /fonts) ===== */
+/* ===== fuentes ===== */
+/* Familjen Grotesk (Google, gratis) se usa mientras no esté el archivo de Europa Grotesk en /fonts */
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&display=swap");
 @font-face{font-family:"Reactive Anchor";src:url(fonts/ReactiveAnchor.otf) format("opentype");font-display:swap}
 @font-face{font-family:"Europa Grotesk";src:url(fonts/EuropaGrotesk.otf) format("opentype");font-display:swap}
 /* ===== paleta del branding ===== */
 :root{--y:#F3DD4C;--r:#FC2A8D;--b:#01AADE;--o:#EC4804;--c:#F3ECDC;--g:#5F5555;--k:#000;
---disp:"Europa Grotesk","Archivo","Arial Black",sans-serif;
---body:"Europa Grotesk","Archivo",system-ui,sans-serif}
+--disp:"Europa Grotesk","Familjen Grotesk",sans-serif;
+--body:"Europa Grotesk","Familjen Grotesk",sans-serif}
 
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
 body{margin:0;background:var(--c);color:#1d1818;font:400 17px/1.65 var(--body);overflow-x:hidden}
-h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.02;margin:0}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.02;margin:0}
 a{color:inherit}.w{max-width:1100px;margin:0 auto;padding:0 22px}
 img{max-width:100%;height:auto}
 :focus-visible{outline:3px solid var(--b);outline-offset:3px}
@@ -16,7 +18,7 @@ img{max-width:100%;height:auto}
 /* ===== nav ===== */
 nav{position:sticky;top:0;z-index:20;background:var(--k);color:var(--c);border-bottom:4px solid var(--y)}
 nav .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-nav b{font-family:"Europa Grotesk","Archivo",sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;color:var(--y)}
+nav b{font-family:var(--body);font-weight:700;font-size:22px;letter-spacing:.02em;color:var(--y)}
 nav ul{display:flex;gap:22px;margin:0;padding:0;list-style:none;font-weight:600;font-size:15px}
 nav a{text-decoration:none}nav a:hover{color:var(--y)}
 @media(max-width:700px){nav ul{display:none}}
