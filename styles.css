@@ -121,3 +121,4 @@ footer b{display:block;font:400 34px var(--disp);color:var(--y);margin-bottom:6p
 @keyframes salto{40%{transform:translateY(-60px) rotate(-12deg) scale(1.15)}}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.prod-card[data-tipo="muneco"] .pic{aspect-ratio:3/4}
