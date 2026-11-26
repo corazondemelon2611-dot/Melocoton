@@ -24,11 +24,11 @@ nav a{text-decoration:none}nav a:hover{color:var(--y)}
 @media(max-width:700px){nav ul{display:none}}
 
 /* ===== hero ===== */
-.hero{background:var(--g);color:var(--c);text-align:center;padding:36px 0 0;position:relative;overflow:hidden}
+.hero{background:var(--g);color:var(--c);text-align:center;padding:16px 0 0;position:relative;overflow:hidden}
 .hero::before{content:"M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M";
 position:absolute;left:0;right:0;top:-90px;bottom:0;font:400 54px/90px "Reactive Anchor","Bowlby One",sans-serif;letter-spacing:34px;text-align:center;color:#ffffff10;overflow:hidden;pointer-events:none;animation:lluvia 6s linear infinite}
 @keyframes lluvia{to{transform:translateY(90px)}}
-.logo-img{position:relative;margin:0 auto -40px;max-width:600px;animation:pop .9s cubic-bezier(.2,1.6,.4,1) both}
+.logo-img{position:relative;margin:0 auto -180px;max-width:600px;animation:pop .9s cubic-bezier(.2,1.6,.4,1) both}
 .logo-img img{display:block;width:100%;height:auto}
 @keyframes pop{from{transform:scale(.5) rotate(6deg);opacity:0}}
 .hero p{position:relative;max-width:34em;margin:14px auto 0;font-size:21px}

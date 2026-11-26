@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo — Melocotón</title>
+<meta name="description" content="Catálogo de la colección Corazón de Melón: kits por personaje, títeres, libros textiles, muñecos intervenibles y estuchera.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Bowlby+One&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* solo para el catálogo */
+.cat-hero{background:var(--g);color:var(--c);text-align:center;padding:64px 0 0;position:relative;overflow:hidden}
+.cat-hero h1{font-size:clamp(40px,8vw,84px);color:var(--y);text-shadow:3px 3px 0 var(--r),6px 6px 0 var(--b)}
+.cat-hero p{max-width:34em;margin:16px auto 0;font-size:19px}
+.filtros{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+.filtros button{font:700 15px var(--body);background:#fff;color:#000;border:3px solid #000;border-radius:999px;padding:8px 20px;box-shadow:4px 4px 0 #000;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.filtros button:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.filtros button[aria-pressed="true"]{background:var(--r)}
+.catalogo{background:var(--c);padding-top:56px}
+.cat-titulo{margin:56px 0 0;font-size:clamp(28px,4vw,40px)}
+.cat-titulo.oculto{display:none}
+.prod-card{display:flex;flex-direction:column;text-align:center;padding-top:0;overflow:hidden}
+.prod-card .pic{font-size:96px}
+.prod-card.oculto{display:none}
+.prod-card p{flex:1}
+.prod-card .tag{margin:0 auto}
+.prod-card .incluye{list-style:none;padding:0;margin:4px 0 0;font-size:15px}
+.prod-card .precio{font:700 22px var(--disp);margin:6px 0 0;flex:0}
+.prod-card .btn{margin:14px auto 0;padding:10px 24px;font-size:15px}
+.pic.o{background:var(--o)}
+.volver{display:inline-block;margin-top:40px;font-weight:700}
+</style>
+</head>
+<body>
+<nav aria-label="Principal"><div class="w"><b><a href="index.html" style="text-decoration:none">Melocotón</a></b>
+<ul><li><a href="index.html#concepto">Concepto</a></li><li><a href="index.html#personajes">Personajes</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#kits">Kits</a></li><li><a href="index.html#distribucion">Distribución</a></li></ul></div></nav>
+
+<header class="cat-hero">
+<div class="w">
+<h1>Catálogo</h1>
+<p>Colección «Corazón de Melón». Llévate el kit de tu personaje favorito en su costal o arma el tuyo pieza por pieza.</p>
+</div>
+<div class="cut"></div>
+</header>
+
+<section class="catalogo"><div class="w">
+<div class="filtros" role="group" aria-label="Filtrar productos">
+<button type="button" data-f="todo" aria-pressed="true">Todo</button>
+<button type="button" data-f="kit" aria-pressed="false">Kits</button>
+<button type="button" data-f="titere" aria-pressed="false">Títeres</button>
+<button type="button" data-f="libro" aria-pressed="false">Libros</button>
+<button type="button" data-f="muneco" aria-pressed="false">Muñecos</button>
+<button type="button" data-f="estuchera" aria-pressed="false">Estuchera</button>
+</div>
+
+<!-- ===== KITS POR PERSONAJE ===== -->
+<h2 class="cat-titulo" data-tipo="kit">Kits por personaje</h2>
+<div class="grid">
+<article class="card prod-card" data-tipo="kit"><div class="pic a"><img src="img/luchador.gif" alt=""></div><span class="tag">Kit</span><h3>Kit Memito el toro</h3><ul class="incluye"><li>Títere</li><li>Libro textil</li><li>Muñeco intervenible</li><li>Bolsa costal</li></ul><p></p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="kit"><div class="pic b"><img src="img/nina.gif" alt=""></div><span class="tag">Kit</span><h3>Kit Yolotl</h3><ul class="incluye"><li>Títere</li><li>Libro textil</li><li>Muñeco intervenible</li><li>Bolsa costal</li></ul><p></p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="kit"><div class="pic c"><img src="img/xolo.gif" alt=""></div><span class="tag">Kit</span><h3>Kit Xolin</h3><ul class="incluye"><li>Títere</li><li>Libro textil</li><li>Muñeco intervenible</li><li>Bolsa costal</li></ul><p></p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+</div>
+
+<!-- ===== TÍTERES ===== -->
+<h2 class="cat-titulo" data-tipo="titere">Títeres</h2>
+<div class="grid">
+<article class="card prod-card" data-tipo="titere"><div class="pic a">🧤</div><span class="tag">Títere</span><h3>Títere Memito</h3><p>Para inventar historias con las manos.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="titere"><div class="pic b">🧤</div><span class="tag">Títere</span><h3>Títere Yolotl</h3><p>Para inventar historias con las manos.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="titere"><div class="pic c">🧤</div><span class="tag">Títere</span><h3>Títere Xolin</h3><p>Para inventar historias con las manos.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+</div>
+
+<!-- ===== LIBROS ===== -->
+<h2 class="cat-titulo" data-tipo="libro">Libros textiles</h2>
+<div class="grid">
+<article class="card prod-card" data-tipo="libro"><div class="pic a">📖</div><span class="tag">Libro textil</span><h3>Libro de Memito</h3><p>Didáctico y sensorial. Memito cuenta su propia historia.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="libro"><div class="pic b">📖</div><span class="tag">Libro textil</span><h3>Libro de Yolotl</h3><p>Didáctico y sensorial. Yolotl cuenta su propia historia.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="libro"><div class="pic c">📖</div><span class="tag">Libro textil</span><h3>Libro de Xolin</h3><p>Didáctico y sensorial. Xolin cuenta su propia historia.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+</div>
+
+<!-- ===== MUÑECOS INTERVENIBLES ===== -->
+<h2 class="cat-titulo" data-tipo="muneco">Muñecos intervenibles</h2>
+<div class="grid">
+<article class="card prod-card" data-tipo="muneco"><div class="pic a">🧸</div><span class="tag">Intervenible</span><h3>Muñeco Memito</h3><p>Para decorarlo y hacerlo tuyo.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="muneco"><div class="pic b">🧸</div><span class="tag">Intervenible</span><h3>Muñeco Yolotl</h3><p>Para decorarlo y hacerlo tuyo.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+<article class="card prod-card" data-tipo="muneco"><div class="pic c">🧸</div><span class="tag">Intervenible</span><h3>Muñeco Xolin</h3><p>Para decorarlo y hacerlo tuyo.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+</div>
+
+<!-- ===== ESTUCHERA ===== -->
+<h2 class="cat-titulo" data-tipo="estuchera">Estuchera</h2>
+<div class="grid">
+<article class="card prod-card" data-tipo="estuchera"><div class="pic o">🖍️</div><span class="tag">Accesorio</span><h3>Estuchera con plumones</h3><p>Trae los plumones para decorar tu muñeco intervenible.</p><p class="precio">$000 MXN</p><a class="btn pedir" href="#">Pedir</a></article>
+</div>
+
+<a class="volver" href="index.html">← Regresar al inicio</a>
+</div></section>
+
+<footer><b>Melocotón</b>Colección «Corazón de Melón» SS 2027</footer>
+
+<script>
+/* filtros: esconden tarjetas, títulos y grupos vacíos */
+const botones=document.querySelectorAll(".filtros button");
+const cosas=document.querySelectorAll(".prod-card,.cat-titulo");
+botones.forEach(b=>b.addEventListener("click",()=>{
+  botones.forEach(x=>x.setAttribute("aria-pressed",x===b));
+  cosas.forEach(c=>c.classList.toggle("oculto",b.dataset.f!=="todo"&&c.dataset.tipo!==b.dataset.f));
+}));
+/* botón Pedir: abre correo con el nombre del producto */
+const CORREO="hola@tucorreo.com";
+document.querySelectorAll(".pedir").forEach(a=>{
+  const p=a.closest(".prod-card").querySelector("h3").textContent;
+  a.href="mailto:"+CORREO+"?subject="+encodeURIComponent("Pedido Melocotón: "+p);
+});
+</script>
+</body>
+</html>
